@@ -24,9 +24,9 @@
 
       <v-list>
 
-        <v-list-item-group v-model="selectedItem" color="primary">
-
-            <v-list-item v-for="(item, i) in items" :key="i">
+        <v-list-item-group v-model="selectedItem" color="primary" >
+         
+          <v-list-item v-for="(item, i) in items" :key="i" >
 
             <v-list-item-avatar>
               <v-img
@@ -39,7 +39,7 @@
               <v-list-item-title class="text-uppercase" v-text="item.title"></v-list-item-title>
             </v-list-item-content>
 
-            </v-list-item>
+          </v-list-item>
 
         </v-list-item-group>
         
@@ -64,23 +64,24 @@
         selectedItem: 1,
         items: [
             {
-          active: true,
-          avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
-          title: 'Jason Oner',
-        },
-        {
-          active: true,
-          avatar: 'https://cdn.vuetifyjs.com/images/lists/2.jpg',
-          title: 'Mike Carlson',
-        },
-        {
-          avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg',
-          title: 'Cindy Baker',
-        },
-        {
-          avatar: 'https://cdn.vuetifyjs.com/images/lists/4.jpg',
-          title: 'Ali Connors',
-        },
+              active: true,
+              avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
+              title: 'Jason Oner',
+            },
+            {
+              active: true,
+              avatar: 'https://cdn.vuetifyjs.com/images/lists/2.jpg',
+              title: 'Mike Carlson',
+            },
+            {
+              avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg',
+              title: 'Cindy Baker',
+            },
+            {
+              avatar: 'https://cdn.vuetifyjs.com/images/lists/4.jpg',
+              title: 'Ali Connors',
+            },
+            
         ],
     }),
 

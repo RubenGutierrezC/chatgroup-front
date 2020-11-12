@@ -1,10 +1,33 @@
 <template>
-  <v-navigation-drawer 
+  <v-navigation-drawer
     v-model="drawer" app>
 
-    <channels />
+    <channels v-if="true"/>
 
-    <channel v-if="false"/>
+    <channel v-else/>
+
+    <template v-slot:append>
+
+      <v-container>
+
+        <v-list-item>
+          <v-list-item-avatar>
+            <v-img
+              :alt="`${user.title} avatar`"
+              :src="user.avatar"
+            ></v-img>
+          </v-list-item-avatar>
+
+          <v-list-item-content>
+            <v-list-item-title class="text-capitalize" v-text="user.title"></v-list-item-title>
+          </v-list-item-content>
+
+          <v-icon dark>mdi-chevron-up</v-icon>
+        </v-list-item>
+
+      </v-container>
+
+    </template>
 
   </v-navigation-drawer>
 </template>
@@ -27,6 +50,10 @@
     },
 
     data: () => ({
+      user:{
+        avatar: 'https://cdn.vuetifyjs.com/images/lists/4.jpg',
+        title: 'Ali Connors',
+      },
     }),
 
   })

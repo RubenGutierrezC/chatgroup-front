@@ -2,7 +2,7 @@
   <div>
         <v-subheader>
             <div class="text-h6">
-                <v-icon dark>mdi-arrow-left</v-icon> Channels
+                <v-icon dark>mdi-chevron-left</v-icon> Channels
             </div>
         </v-subheader>
 
@@ -63,23 +63,24 @@
         selectedItem: 1,
         items: [
             {
-          active: true,
-          avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
-          title: 'Jason Oner',
-        },
-        {
-          active: true,
-          avatar: 'https://cdn.vuetifyjs.com/images/lists/2.jpg',
-          title: 'Mike Carlson',
-        },
-        {
-          avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg',
-          title: 'Cindy Baker',
-        },
-        {
-          avatar: 'https://cdn.vuetifyjs.com/images/lists/4.jpg',
-          title: 'Ali Connors',
-        },
+              active: true,
+              avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
+              title: 'Jason Oner',
+            },
+            {
+              active: true,
+              avatar: 'https://cdn.vuetifyjs.com/images/lists/2.jpg',
+              title: 'Mike Carlson',
+            },
+            {
+              avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg',
+              title: 'Cindy Baker',
+            },
+            {
+              avatar: 'https://cdn.vuetifyjs.com/images/lists/4.jpg',
+              title: 'Ali Connors',
+            },
+            
         ],
     }),
 
