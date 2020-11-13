@@ -1,156 +1,148 @@
 <template>
-<div>
-  <v-app-bar app color="#252329">
-    <v-toolbar-title class="title-toolbar"
-      >FRONT-END DEVELOPERS</v-toolbar-title
-    >
-  </v-app-bar>
+  <div class="messages-container px-12">
 
-  <v-main>
-    <!--  -->
-    <v-list three-line class="list-container">
-      <template v-for="(item, index) in items">
-        <v-subheader
-          v-if="item.header"
-          :key="item.header"
-          v-text="item.header"
-        ></v-subheader>
+    <v-app-bar app color="bgDark px-12">
+      <v-toolbar-title>
+        FRONT-END DEVELOPERS
+      </v-toolbar-title>
+    </v-app-bar>
 
-        <v-divider
-          v-else-if="item.divider"
-          :key="index"
-          :inset="item.inset"
-        ></v-divider>
+    <v-main>
+      <v-list three-line color="bgDark">
+        <template v-for="(item, index) in items">
+          <v-subheader
+            v-if="item.header"
+            :key="item.header"
+            v-text="item.header"
+          ></v-subheader>
 
-        <v-list-item v-else :key="item.title" class="list-content">
-          <v-list-item-avatar>
-            <v-img :src="item.avatar"></v-img>
-          </v-list-item-avatar>
+          <v-divider
+            v-else-if="item.divider"
+            :key="index"
+            :inset="item.inset"
+          ></v-divider>
 
-          <v-list-item-content class="list-content">
-            <v-list-item-title
-              class="list-content"
-              v-html="item.title"
-            ></v-list-item-title>
-            <v-list-item-subtitle
-              class="list-content"
-              v-html="item.subtitle"
-            ></v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
-      </template>
-    </v-list>
-  </v-main>
+          <v-list-item v-else :key="item.title" class="list-content">
+            <v-list-item-avatar>
+              <v-img :src="item.avatar"></v-img>
+            </v-list-item-avatar>
 
-  <v-footer app color="transparent" height="72" inset class="footer-textfield">
-    <div></div>
-    <v-text-field
-      class="rounded-lg textfield-message"
-      background-color="#3c393f"
-      dense
-      flat
-      hide-details
-      solo
-      placeholder="Type a message here"
-    >
-    </v-text-field>
-    <v-btn color="primary">
+            <v-list-item-content class="list-content">
+              <v-list-item-title>
+                <span>
+                  {{ item.userName }}
+                </span>
+                  {{ item.date }}
+              </v-list-item-title>
+              <v-list-item-subtitle
+                class="list-content"
+                v-text="item.subtitle"
+              ></v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+        </template>
+      </v-list>
+    </v-main>
+
+    <v-footer app color="bgDark" height="72" inset class="px-12">
+      <div></div>
+      <v-text-field
+        class="rounded-lg textfield-message"
+        background-color="bgGrey"
+        dense
+        flat
+        hide-details
+        solo
+        placeholder="Type a message here"
       >
-    </v-btn>
-  </v-footer>
-</div>
-
+      </v-text-field>
+      <v-btn color="primary">
+        >
+      </v-btn>
+    </v-footer>
+  </div>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue';
 
 export default Vue.extend({
-  name: "messages",
+  name: 'messages',
   data: () => ({
     items: [
-      { header: "Today" },
+      { header: 'Today' },
       {
-        avatar: "https://cdn.vuetifyjs.com/images/lists/1.jpg",
-        title: "Brunch this weekend?",
-        subtitle: `<span class="text--white">Ali Connors</span> &mdash; I'll be in your neighborhood doing errands this weekend. Do you want to hang out?`
+        avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
+        userName: 'Denzel Barret',
+        date: 'yesterday',
+        message: 'perro momazo'
       },
       { divider: true, inset: true },
       {
-        avatar: "https://cdn.vuetifyjs.com/images/lists/2.jpg",
-        title: 'Summer BBQ <span class="grey--text text--lighten-1">4</span>',
-        subtitle: `<span class="text--white">to Alex, Scott, Jennifer</span> &mdash; Wish I could come, but I'm out of town this weekend.`
+        avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
+        userName: 'Denzel Barret',
+        date: 'yesterday',
+        message: 'perro momazo'
       },
       { divider: true, inset: true },
       {
-        avatar: "https://cdn.vuetifyjs.com/images/lists/3.jpg",
-        title: "Oui oui",
-        subtitle:
-          '<span class="text--white">Sandra Adams</span> &mdash; Do you have Paris recommendations? Have you ever been?'
+        avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
+        userName: 'Denzel Barret',
+        date: 'yesterday',
+        message: 'perro momazo'
       },
       { divider: true, inset: true },
       {
-        avatar: "https://cdn.vuetifyjs.com/images/lists/4.jpg",
-        title: "Birthday gift",
-        subtitle:
-          '<span class="text--white">Trevor Hansen</span> &mdash; Have any ideas about what we should get Heidi for her birthday?'
+        avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
+        userName: 'Denzel Barret',
+        date: 'yesterday',
+        message: 'perro momazo'
       },
       { divider: true, inset: true },
       {
-        avatar: "https://cdn.vuetifyjs.com/images/lists/5.jpg",
-        title: "Recipe to try",
-        subtitle:
-          '<span class="text--white">Britta Holt</span> &mdash; We should eat this: Grate, Squash, Corn, and tomatillo Tacos.'
-      }
+        avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
+        userName: 'Denzel Barret',
+        date: 'yesterday',
+        message: 'perro momazo'
+      },
+      { divider: true, inset: true },
+      {
+        avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
+        userName: 'Denzel Barret',
+        date: 'yesterday',
+        message: 'perro momazo'
+      },
+      { divider: true, inset: true },
+      {
+        avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
+        userName: 'Denzel Barret',
+        date: 'yesterday',
+        message: 'perro momazo'
+      },
+      { divider: true, inset: true },
+      {
+        avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
+        userName: 'Denzel Barret',
+        date: 'yesterday',
+        message: 'perro momazo'
+      },
+      { divider: true, inset: true },
+      {
+        avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
+        userName: 'Denzel Barret',
+        date: 'yesterday',
+        message: 'perro momazo'
+      },
+      { divider: true, inset: true },
     ]
   })
 });
 </script>
 
 <style lang="scss">
-.chat-container {
-  .v-application--wrap {
-    background: #252329;
-  }
-}
-
-.title-toolbar {
-  color: #fff;
-}
-
-.list-container {
-  background-color: #252329 !important;
-}
-
-.list-content {
-  color: #ffffff !important;
-  span {
-    color: #ffffff !important;
-  }
-}
-
-.text-white {
-  color: #fff;
-}
-
 .messages-container {
-  overflow-y: auto;
+  height: 100%;
+  background-color: var(--v-bgDark-base);
 }
-.header {
-  background-color: black;
-  width: 100%;
-  height: 64px;
-}
-.footer-textfield {
-  background-color: green;
-  padding: 0px 15px;
-  .textfield-message {
-    input {
-      color: #fff !important;
-    }
-    input::placeholder {
-      color: #828282 !important;
-    }
-  }
-}
+
 </style>
