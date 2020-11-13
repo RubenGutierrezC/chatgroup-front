@@ -3,26 +3,20 @@
 
     <navigation :drawer="drawer"/>
 
-    <v-app-bar app>
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-
-      <v-toolbar-title>Application</v-toolbar-title>
-    </v-app-bar>
-
-    <v-main>
-      <!--  -->
-    </v-main>
+    <messages />
   </v-app>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator' // @ is an alias to /src
 import Navigation from '../components/Navigation.vue'
+import Messages from '../components/Messages.vue'
 
 @Component({
   name: 'Home',
   components:{
-    Navigation
+    Navigation,
+    Messages
   },
 
   data(){

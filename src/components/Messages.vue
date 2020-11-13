@@ -1,66 +1,65 @@
 <template>
-  <v-app class="chat-container">
-    <v-app-bar app color="#252329">
-      <v-toolbar-title class="title-toolbar"
-        >FRONT-END DEVELOPERS</v-toolbar-title
-      >
-    </v-app-bar>
-
-    <v-main>
-      <!--  -->
-      <v-list three-line class="list-container">
-        <template v-for="(item, index) in items">
-          <v-subheader
-            v-if="item.header"
-            :key="item.header"
-            v-text="item.header"
-          ></v-subheader>
-
-          <v-divider
-            v-else-if="item.divider"
-            :key="index"
-            :inset="item.inset"
-          ></v-divider>
-
-          <v-list-item v-else :key="item.title" class="list-content">
-            <v-list-item-avatar>
-              <v-img :src="item.avatar"></v-img>
-            </v-list-item-avatar>
-
-            <v-list-item-content class="list-content">
-              <v-list-item-title class="list-content" v-html="item.title"></v-list-item-title>
-              <v-list-item-subtitle class="list-content"
-                v-html="item.subtitle"
-              ></v-list-item-subtitle>
-            </v-list-item-content>
-          </v-list-item>
-        </template>
-      </v-list>
-    </v-main>
-
-    <v-footer
-      app
-      color="transparent"
-      height="72"
-      inset
-      class="footer-textfield"
+<div>
+  <v-app-bar app color="#252329">
+    <v-toolbar-title class="title-toolbar"
+      >FRONT-END DEVELOPERS</v-toolbar-title
     >
-      <div></div>
-      <v-text-field
-        class="rounded-lg textfield-message"
-        background-color="#3c393f"
-        dense
-        flat
-        hide-details
-        solo
-        placeholder="Type a message here"
+  </v-app-bar>
+
+  <v-main>
+    <!--  -->
+    <v-list three-line class="list-container">
+      <template v-for="(item, index) in items">
+        <v-subheader
+          v-if="item.header"
+          :key="item.header"
+          v-text="item.header"
+        ></v-subheader>
+
+        <v-divider
+          v-else-if="item.divider"
+          :key="index"
+          :inset="item.inset"
+        ></v-divider>
+
+        <v-list-item v-else :key="item.title" class="list-content">
+          <v-list-item-avatar>
+            <v-img :src="item.avatar"></v-img>
+          </v-list-item-avatar>
+
+          <v-list-item-content class="list-content">
+            <v-list-item-title
+              class="list-content"
+              v-html="item.title"
+            ></v-list-item-title>
+            <v-list-item-subtitle
+              class="list-content"
+              v-html="item.subtitle"
+            ></v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+      </template>
+    </v-list>
+  </v-main>
+
+  <v-footer app color="transparent" height="72" inset class="footer-textfield">
+    <div></div>
+    <v-text-field
+      class="rounded-lg textfield-message"
+      background-color="#3c393f"
+      dense
+      flat
+      hide-details
+      solo
+      placeholder="Type a message here"
+    >
+    </v-text-field>
+    <v-btn color="primary">
       >
-      </v-text-field>
-      <v-btn color="primary">
-        >
-      </v-btn>
-    </v-footer>
-  </v-app>
+    </v-btn>
+  </v-footer>
+</div>
+
 </template>
 
 <script lang="ts">
@@ -123,15 +122,15 @@ export default Vue.extend({
   background-color: #252329 !important;
 }
 
-  .list-content {
+.list-content {
+  color: #ffffff !important;
+  span {
     color: #ffffff !important;
-    span {
-      color: #ffffff !important;
-    }
   }
+}
 
 .text-white {
-  color: #fff
+  color: #fff;
 }
 
 .messages-container {
