@@ -1,6 +1,6 @@
 <template>
   <v-app id="inspire">
-    
+
     <navigation :drawer="drawer"/>
 
     <v-app-bar app>
@@ -30,7 +30,7 @@ import Navigation from '../components/Navigation.vue'
       drawer: null
     }
   },
-  
+
   created () {
     this.$vuetify.theme.dark = true
   },
