@@ -2,9 +2,9 @@
   <v-navigation-drawer
     v-model="drawer" app>
 
-    <channels v-if="false"/>
+    <channels v-if="channel" v-on:change="changeChannel"/>
 
-    <channel v-else/>
+    <channel v-else v-on:change="changeChannel"/>
 
     <template v-slot:append>
 
@@ -99,17 +99,18 @@
     },
 
     data: () => ({
+      channel: false,
       user:{
         avatar: 'https://cdn.vuetifyjs.com/images/lists/4.jpg',
         title: 'Ali Connors',
-      },
-      items: [
-        { title: 'Click Me' },
-        { title: 'Click Me' },
-        { title: 'Click Me' },
-        { title: 'Click Me 2' },
-      ],
+      }
     }),
+
+    methods:{
+      changeChannel(){
+        this.channel != this.channel;
+      }
+    },
 
   })
 

@@ -2,7 +2,7 @@
   <div>
         <v-subheader>
             <div class="text-h6">
-              <v-btn text x-samll class="button-x-small">
+              <v-btn text x-samll class="button-x-small" @click="$emit('change')">
                 <v-icon dark>mdi-chevron-left</v-icon>
               </v-btn> Channels
             </div>
@@ -85,10 +85,3 @@
   })
 
 </script>
-
-<style lang="sass">
-  .button-x-small
-    height: 32px !important
-    width: 32px !important
-
-</style>

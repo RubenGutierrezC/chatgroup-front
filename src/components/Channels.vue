@@ -28,7 +28,7 @@
          
           <v-list-item v-for="(item, i) in items" :key="i" >
 
-            <v-list-item-avatar>
+            <v-list-item-avatar @click="$emit('change')">
               <v-img
                 
                 :alt="`${item.title} avatar`"
