@@ -10,7 +10,8 @@ export default new Vuetify({
       dark: {
         bgDark: '#252329',
         bgGrey: '#3c393f',
-        customGrey: '#828282'
+        customGrey: '#828282',
+        textMessage: '#E0E0E0'
       }
     },
     options: {

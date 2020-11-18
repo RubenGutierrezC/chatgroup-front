@@ -7,10 +7,10 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn fab dark x-small class="d-flex flex-row-reverse">
+      <v-btn dark x-small class="d-flex flex-row-reverse">
         <v-icon dark>mdi-plus</v-icon>
       </v-btn>
-      
+
     </v-subheader>
 
     <v-container>
@@ -20,12 +20,12 @@
         label="Search"
         append-icon="mdi-magnify"
       ></v-text-field>
-    
+
 
       <v-list>
 
         <v-list-item-group v-model="selectedItem" color="primary" >
-         
+
           <v-list-item v-for="(item, i) in items" :key="i" >
 
             <v-list-item-avatar>
@@ -42,7 +42,7 @@
           </v-list-item>
 
         </v-list-item-group>
-        
+
       </v-list>
 
     </v-container>
@@ -81,7 +81,7 @@
               avatar: 'https://cdn.vuetifyjs.com/images/lists/4.jpg',
               title: 'Ali Connors',
             },
-            
+
         ],
     }),
 
