@@ -108,7 +108,7 @@
 
     methods:{
       changeChannel(){
-        this.channel != this.channel;
+        this.channel = !this.channel;
       }
     },
 

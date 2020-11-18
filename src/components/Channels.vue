@@ -26,9 +26,9 @@
 
         <v-list-item-group v-model="selectedItem" color="primary" >
          
-          <v-list-item v-for="(item, i) in items" :key="i" >
+          <v-list-item v-for="(item, i) in items" :key="i" @click="$emit('change')">
 
-            <v-list-item-avatar @click="$emit('change')">
+            <v-list-item-avatar>
               <v-img
                 
                 :alt="`${item.title} avatar`"
