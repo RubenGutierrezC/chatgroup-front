@@ -2,7 +2,7 @@
   <v-navigation-drawer
     v-model="drawer" app>
 
-    <channels v-if="true"/>
+    <channels v-if="false"/>
 
     <channel v-else/>
 
@@ -115,6 +115,9 @@
 
 </script>
 
-<style>
+<style lang="sass">
+  .button-x-small
+    height: 32px !important
+    width: 32px !important
 
 </style>

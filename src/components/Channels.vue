@@ -85,10 +85,3 @@
   })
 
 </script>
-
-<style lang="sass">
-  .button-x-small
-    height: 32px !important
-    width: 32px !important
-
-</style>

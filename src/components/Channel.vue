@@ -2,7 +2,9 @@
   <div>
         <v-subheader>
             <div class="text-h6">
-                <v-icon dark>mdi-chevron-left</v-icon> Channels
+              <v-btn text x-samll class="button-x-small">
+                <v-icon dark>mdi-chevron-left</v-icon>
+              </v-btn> Channels
             </div>
         </v-subheader>
 
@@ -83,3 +85,10 @@
   })
 
 </script>
+
+<style lang="sass">
+  .button-x-small
+    height: 32px !important
+    width: 32px !important
+
+</style>
