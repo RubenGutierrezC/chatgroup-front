@@ -33,13 +33,43 @@
                 v-on="on">mdi-chevron-up</v-icon>
             </template>
 
-            <v-list>
-              <v-list-item
-                v-for="(item, index) in items"
-                :key="index"
-              >
-                <v-list-item-title>{{ item.title }}</v-list-item-title>
+            <v-list class="rounded-lg">
+              <v-list-item>
+
+                <v-list-item-content>
+                    <v-btn text>
+                      <v-icon left>mdi-account-circle</v-icon>
+                      My Profile
+                    </v-btn>
+                </v-list-item-content>
+
               </v-list-item>
+
+              <v-list-item>
+
+                <v-list-item-content>
+                    <v-btn text>
+                      <v-icon left>mdi-image-filter-hdr</v-icon>
+                      Tweeter
+                    </v-btn>
+                </v-list-item-content>
+
+              </v-list-item>
+
+              <v-divider></v-divider>
+
+              <v-list-item>
+
+                <v-list-item-content>
+                    <v-btn text color="accent">
+                      <v-icon left>mdi-logout</v-icon>
+                      Logout
+                    </v-btn>
+                </v-list-item-content>
+
+              </v-list-item>
+
+
             </v-list>
           </v-menu>
         </v-list-item>

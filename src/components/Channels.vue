@@ -7,7 +7,7 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn fab dark x-small class="d-flex flex-row-reverse">
+      <v-btn dark x-small class="button-x-small">
         <v-icon dark>mdi-plus</v-icon>
       </v-btn>
       
@@ -16,7 +16,7 @@
     <v-container>
       <v-text-field
         solo
-        rounded
+        class="rounded-lg textfield-message"
         label="Search"
         append-icon="mdi-magnify"
       ></v-text-field>
@@ -30,6 +30,7 @@
 
             <v-list-item-avatar>
               <v-img
+                
                 :alt="`${item.title} avatar`"
                 :src="item.avatar"
               ></v-img>
@@ -55,10 +56,6 @@
 
   export default Vue.extend({
     name: 'Channels',
-
-    props: {
-      drawer: null
-    },
 
     data: () => ({
         selectedItem: 1,
@@ -88,3 +85,10 @@
   })
 
 </script>
+
+<style lang="sass">
+  .button-x-small
+    height: 32px !important
+    width: 32px !important
+
+</style>

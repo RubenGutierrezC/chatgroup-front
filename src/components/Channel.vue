@@ -55,10 +55,6 @@
   export default Vue.extend({
     name: 'Channel',
 
-    props: {
-      drawer: null
-    },
-
     data: () => ({
         selectedItem: 1,
         items: [
