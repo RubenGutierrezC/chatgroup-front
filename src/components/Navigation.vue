@@ -22,7 +22,26 @@
             <v-list-item-title class="text-capitalize" v-text="user.title"></v-list-item-title>
           </v-list-item-content>
 
-          <v-icon dark>mdi-chevron-up</v-icon>
+          
+          <v-menu
+            open-on-hover
+            top
+            offset-y
+          >
+            <template v-slot:activator="{ on, attrs }">
+              <v-icon dark v-bind="attrs"
+                v-on="on">mdi-chevron-up</v-icon>
+            </template>
+
+            <v-list>
+              <v-list-item
+                v-for="(item, index) in items"
+                :key="index"
+              >
+                <v-list-item-title>{{ item.title }}</v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
         </v-list-item>
 
       </v-container>
@@ -54,6 +73,12 @@
         avatar: 'https://cdn.vuetifyjs.com/images/lists/4.jpg',
         title: 'Ali Connors',
       },
+      items: [
+        { title: 'Click Me' },
+        { title: 'Click Me' },
+        { title: 'Click Me' },
+        { title: 'Click Me 2' },
+      ],
     }),
 
   })
